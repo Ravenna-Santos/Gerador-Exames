@@ -24,6 +24,19 @@ h2{
 
 }
 
+.corpo .input-maior{
+    width: 50px;
+}
+
 .corpo p, .corpo h3{
     font-size: 14px;
+}
+
+.subtitiulo{
+    display: flex;
+    flex-direction: row;
+}
+
+.subtitiulo h2{
+    padding: 10px;
 }

@@ -1,5 +1,5 @@
 const btnGenerate = document.querySelector("#generate-pdf");
-//deu bo quando começou a rolar a pagina
+//deu bo quando começou a rolar/quebrar a pagina
 btnGenerate.addEventListener("click", () => {
 
     console.log('entrou');
@@ -12,6 +12,7 @@ btnGenerate.addEventListener("click", () => {
         margin: [10, 10, 10, 10],
         filename: "exame.pdf",
         //html2canvas: {scale: 2},
+        pagebreak: { mode: 'avoid-all'},
         jsPDF: {unit:"mm", format: "a4", orientation: "portrait"}
     }
 
