@@ -13,15 +13,43 @@
 <body>
     <div id="content">
         <div class="cabecalho">
-            <p>Nome.................. : <input type="text">         Dt. Nascimento: <input type="text"></p>
+            <p>Nome.................. : <input type="text">         Dt. Nascimento: <input type="text" placeholder="dd/mm/aaaa" maxlength="10"></p>
             <p>RG...................... : <input type="text">  CPF:.................. <input type="text"></p>
             <p>Solicitante........... :  <input type="text"> </p>
-            <p>Data Cadastro..... : <input type="text"> </p>
             <p>Local de Coleta... :  <input type="text"> </p>
-            
-            
+            <hr>
         </div>
         
+        <div class="corpo">
+            <h1>HEMOGRAMA COMPLETO</h1>
+            <h2>Espécime Diagnóstico:Sangue Total</h2>
+            <h2>EDTA Método: Resistividade-Impedância</h2>
+            
+            <h3>SÉRIE VERMELHA</h3>
+            <p>ERITRÓCITOS <input type="text"> milhões/mm³</p>
+            <p>HEMOGLOBINA <input type="text"> g/dL</p>
+            <p>HEMATÓCRITO <input type="text"> %</p>
+            <p>VCM <input type="text"> µm³</p>
+            <p>HCM <input type="text"> pg</p>
+            <p>CHCM <input type="text"> g/dL</p>
+            <p>RDW <input type="text"> %</p>
+
+            <h3>SÉRIE BRANCA</h3>
+
+            <p>LEUCÓCITOS <input type="text">  /mm³</p>
+
+            <p>BASTONETES <input type="text"> % <input type="text"> /mm³</p>
+            <p>SEGMENTADOS <input type="text"> % <input type="text"> /mm³</p>
+            <p>EOSINÓFILOS <input type="text"> % <input type="text"> /mm³</p>
+            <p>BASÓFILOS <input type="text"> % <input type="text"> /mm³</p>
+            <p>LINFÓCITOS <input type="text"> % <input type="text"> /mm³</p>
+            <p>MONÓCITOS <input type="text"> % <input type="text"> /mm³</p>
+
+            <h3>SÉRIE PLAQUETÁRIA</h3>
+            <p>PLAQUETAS <input type="text"> /mm³</p>
+            <p>VPM <input type="text"> fL</p>
+        </div>
+
     </div>
     <button id="generate-pdf">Gerar PDF</button>
 

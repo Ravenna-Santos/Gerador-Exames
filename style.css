@@ -1,0 +1,29 @@
+body{
+    font-family: "Arial";
+}
+input{
+    border: none;
+}
+
+.cabecalho p{
+    font-size: 14px;
+}
+
+h1{
+    font-size: 15px;
+}
+
+h2{
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 5px;
+}
+
+.corpo input{
+    width: 20px;
+
+}
+
+.corpo p, .corpo h3{
+    font-size: 14px;
+}
