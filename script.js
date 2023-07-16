@@ -1,9 +1,8 @@
-const btnGenerate = document.querySelector("#generate-pdf");
-//deu bo quando começou a rolar/quebrar a pagina
-btnGenerate.addEventListener("click", () => {
+const btnGeneratePdf = document.querySelector("#generate-pdf");
+const btnGenerateDoc = document.querySelector("#generate-doc");
+btnGeneratePdf.addEventListener("click", () => {
 
-    console.log('entrou');
-
+    window.scrollTo(0, 0); // volta ao topo pra não bugar o pdf
     //conteúdo do pdf será a div content
     const content = document.querySelector("#content");
 
@@ -19,3 +18,47 @@ btnGenerate.addEventListener("click", () => {
     // Gerar e baixar pdf
     html2pdf().set(options).from(content).save();
 })
+
+btnGenerateDoc.addEventListener("click", () =>{
+    console.log('entrou');
+    Export2Word("content", 'exame');
+
+    
+})
+
+
+function Export2Word(element, filename = ''){
+    var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+    var postHtml = "</body></html>";
+    var html = preHtml+document.getElementById(element).innerHTML+postHtml;
+
+    var blob = new Blob(['\ufeff', html], {
+        type: 'application/msword'
+    });
+    
+    // Specify link url
+    var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+    
+    // Specify file name
+    filename = filename?filename+'.doc':'document.doc';
+    
+    // Create download link element
+    var downloadLink = document.createElement("a");
+
+    document.body.appendChild(downloadLink);
+    
+    if(navigator.msSaveOrOpenBlob ){
+        navigator.msSaveOrOpenBlob(blob, filename);
+    }else{
+        // Create a link to the file
+        downloadLink.href = url;
+        
+        // Setting the file name
+        downloadLink.download = filename;
+        
+        //triggering the function
+        downloadLink.click();
+    }
+    
+    document.body.removeChild(downloadLink);
+}

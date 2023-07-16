@@ -1,8 +1,13 @@
 body{
     font-family: "Arial";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #aef5f2;
 }
 input{
     border: none;
+    border-radius: 5px;
 }
 
 .cabecalho p{
@@ -21,6 +26,7 @@ h2{
 
 .corpo input{
     width: 20px;
+    font-weight: bold;
 
 }
 
@@ -39,4 +45,28 @@ h2{
 
 .subtitiulo h2{
     padding: 10px;
+}
+
+.buttons button{
+    background-color: #1e8280;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+
+    box-shadow: 10px 10px 13px 0px rgba(18,77,75,0.75);
+-webkit-box-shadow: 10px 10px 13px 0px rgba(18,77,75,0.75);
+-moz-box-shadow: 10px 10px 13px 0px rgba(18,77,75,0.75);
+
+}
+
+.buttons button:active{
+    background-color: #124d4b;
+    position: relative;
+    top: 1px;
+}
+
+span{
+    font-weight: bold;
 }
